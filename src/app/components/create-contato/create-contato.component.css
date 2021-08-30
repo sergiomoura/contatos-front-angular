@@ -1,0 +1,52 @@
+article {
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 3s linear;
+}
+
+article form {
+    background-color: rgba(0,0,0,0.4);
+    padding: 40px;
+    box-shadow: 0 0 2px inset rgba(256,256,256,0.3);
+    width: 400px;
+}
+
+article form input{
+    display: block;
+    width: 100%;
+}
+
+article form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+article form div input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+article form div a.remove{
+    color: #C00;
+}
+
+article form div a.remove:hover{
+    color: rgb(252, 7, 7);
+}
+
+article form .controles{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 0;
+}

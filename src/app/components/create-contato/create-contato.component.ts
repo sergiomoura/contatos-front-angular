@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-create-contato',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateContatoComponent implements OnInit {
 
+  @Output() emissor:EventEmitter<null> = new EventEmitter();
+
   constructor() { }
+
+  meEsconda(){
+    this.emissor.emit();
+  }
 
   ngOnInit(): void {
   }

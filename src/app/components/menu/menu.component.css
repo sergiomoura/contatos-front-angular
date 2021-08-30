@@ -1,0 +1,46 @@
+nav {
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(256,256,256,0.2);
+}
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    width: 960px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+}
+
+nav > ul > li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ccc;
+    padding: 20px;
+    font-size: 1.2;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav > ul > li > a:hover{
+    background-color: rgba(256,256,256,0.3);
+}
+
+nav > ul > li:last-child{
+    margin-left: auto;
+}

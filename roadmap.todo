@@ -15,14 +15,14 @@ Aparência geral:
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
 
 Criação de Menu:
-    ☐ Criar componentnte components/Menu
+    ✔ Criar componentnte components/Menu @done(21-08-30 10:46)
     O conteúdo de menu.component.html dele deve ser o do elemento nav contida em https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
-    ☐ Adicione esse componente ao app.component.html
-    ☐ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    ✔ Adicione esse componente ao app.component.html @done(21-08-30 10:47)
+    ✔ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-30 10:47)
     . *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
-    ☐ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html
+    ✔ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html @done(21-08-30 10:47)
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    ☐ Verifique se o menu aparece corretamente.
+    ✔ Verifique se o menu aparece corretamente. @done(21-08-30 10:47)
 
 Criação de Lista de Contatos:
     ☐ Criar o componente components/ListaDeContatos

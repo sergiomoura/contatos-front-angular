@@ -46,7 +46,7 @@ Fazendo que os contatos sejam mais dinâmicos:
     .tels (um array de strings)
     ✔ Declare na classe ListaDeContatosComponent um atributo contatos do tipo array de contatos @done(21-08-30 12:07)
     ✔ Atribua a esse atributo um array com pelo menos 10 contatos @done(21-08-30 12:07)
-    ☐ Faça com que esses contatos sejam exibidos.
+    ✔ Faça com que esses contatos sejam exibidos. @done(21-08-30 14:24)
 
 Fazendo com que contatos sejam levantados a partir de um servico:
     ☐ Crie um serviço services/Contato

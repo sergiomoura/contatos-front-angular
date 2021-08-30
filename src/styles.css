@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans',  Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+    font-size: 18px;
+}
+
+body {
+    padding: 0;
+    margin:0;
+    background-color: #212121;
+    color: #CCC;
+    height: 100%;
+    background-image: url(assets/img/bg.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+body::before {
+    height: 100%;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    background: rgba(0,0,0,0.9);
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+form label{
+    font-size: 0.8rem;
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+    padding: 5px;
+    font-size: 1rem;
+    border: 2px solid rgba(0,0,0,0);
+    background-color: rgba(256,256,256,0.8);
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus{
+    outline: none;
+    border: 2px solid rgb(60, 0, 200);
+    background-color: rgba(256,256,256,1);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(60, 0, 200);
+    color: #CCC;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: rgb(80, 0, 250);
+    color: #fff;
+}
+
+button.link{
+    background-color: transparent;
+    color: rgb(80,0,250);
+    text-decoration: underline;
+}
+
+button.link:hover{
+    color: #CCC;
+}
+
+a {
+    background-color: transparent;
+    color: rgb(80,0,250);
+    text-decoration: underline;
+    display: inline-block;
+}
+
+a:hover{
+    color: #CCC;
+}

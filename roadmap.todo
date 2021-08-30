@@ -1,15 +1,15 @@
 Aparência geral:
-    ☐ Crie uma pasta "img" dentro da pasta /src/assets/
+    ✔ Crie uma pasta "img" dentro da pasta /src/assets/ @done(21-08-30 10:19)
     A pasta assets é uma pasta de arquivos estáticos. Muito apropriada para armazenamento de imagens
     utilizadas no layout das páginas
-    ☐ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg
-    ☐ Aplicar geral.css para folha de estilos que será usada no site inteiro. 
-    - Visite:
-    - https://sergiomoura.github.io/contatos-html-template/home.html
-    - https://github.com/sergiomoura/contatos-html-template
-    ☐ Limpe app.component.html
-    ☐ Visite localhost:4200 e verifique se o background já está visível
-    ☐ Incorpore os css externos no index.html
+    ✔ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg @done(21-08-30 10:19)
+    ✔ Aplicar geral.css para folha de estilos que será usada no site inteiro. @done(21-08-30 10:19)
+    . Visite
+    . https://sergiomoura.github.io/contatos-html-template/home.html
+    . https://github.com/sergiomoura/contatos-html-template
+    ✔ Limpe app.component.html @done(21-08-30 10:22)
+    ✔ Visite localhost:4200 e verifique se o background já está visível @done(21-08-30 10:22)
+    ✔ Incorpore os css externos no index.html @done(21-08-30 10:23)
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@ Criação de Menu:
     O conteúdo de menu.component.html dele deve ser o do elemento nav contida em https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
     ☐ Adicione esse componente ao app.component.html
     ☐ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
-    - *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
+    . *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
     ☐ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     ☐ Verifique se o menu aparece corretamente.

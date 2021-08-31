@@ -49,12 +49,12 @@ Fazendo que os contatos sejam mais dinâmicos:
     ✔ Faça com que esses contatos sejam exibidos. @done(21-08-30 14:24)
 
 Fazendo com que contatos sejam levantados a partir de um servico:
-    ☐ Crie um serviço services/Contato
-    ☐ Declare um atributo privado contatos contendo o array de contatos que, agora, não deve mais estar na component ListaDeContatos
-    ☐ Crie nesse serviço a função getContatos() que retorna a lista de contatos.
-    ☐ Importe o serviço ContatoService na Componente ListaDeContatos
-    ☐ Crie um atributo privado contatoService da classe ContatoService e o intancie.
-    ☐ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos.
+    ✔ Crie um serviço services/Contato @done(21-08-31 10:12)
+    ✔ Declare um atributo privado contatos contendo o array de contatos que, agora, não deve mais estar na component ListaDeContatos @done(21-08-31 10:14)
+    ✔ Crie nesse serviço a função getContatos() que retorna a lista de contatos. @done(21-08-31 10:14)
+    ✔ Importe o serviço ContatoService na Componente ListaDeContatos @done(21-08-31 10:14)
+    ✔ Crie um atributo privado cs da classe ContatoService e o intancie. @done(21-08-31 10:15)
+    ✔ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos. @done(21-08-31 10:16)
     
 Criação e Exibição do componente que adiciona/cria um novo contato:
     ☐ Crie o componente components/CreateContato
@@ -73,3 +73,5 @@ Criação e Exibição do componente que adiciona/cria um novo contato:
 
 
 
+
+Archive:

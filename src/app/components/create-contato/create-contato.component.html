@@ -14,7 +14,7 @@
 
                 <input type="tel" name="telefone_{{i}}" [(ngModel)]="novoContato.telefones[i]">
                 
-                <a *ngIf="i==0">
+                <a *ngIf="i==0" (click)="addTelefone()">
                     <i class="material-icons">add_circle</i>
                 </a>
 

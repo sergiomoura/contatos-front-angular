@@ -63,5 +63,9 @@ export class ContatoService {
     return this.contatos;    
   }
 
+  addContato(c:Contato):void {
+    this.contatos.push(c);
+  }
+
   constructor() { }
 }

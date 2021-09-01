@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'contatos';
-  mostrandoCreateContato = false;
+  mostrandoCreateContato = true;
 
   mostrarModal(){
     this.mostrandoCreateContato = true;

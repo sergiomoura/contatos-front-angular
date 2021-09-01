@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
 
 @Component({
@@ -32,6 +32,10 @@ export class CreateContatoComponent implements OnInit {
 
   addTelefone():void{
     this.novoContato.telefones.push("");
+  }
+
+  removeTelefone(pos:number):void{
+    this.novoContato.telefones.splice(pos,1);
   }
 
 }

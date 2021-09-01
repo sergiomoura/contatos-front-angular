@@ -1,0 +1,31 @@
+<div id="modal">
+    <form>
+        <label>
+            Nome:
+            <input type="text" name="nome" id="nome">
+        </label>
+        <label>
+            E-mail:
+            <input type="email" name="email" id="email">
+        </label>
+        <label>
+            Telefone:
+            <div>
+                <input type="email" name="email" id="email">
+                <a><i class="material-icons">add_circle</i></a>
+            </div>
+            <div>
+                <input type="email" name="email" id="email">
+                <a class="remove"><i class="material-icons">remove_circle</i></a>
+            </div>
+            <div>
+                <input type="email" name="email" id="email">
+                <a class="remove"><i class="material-icons">remove_circle</i></a>
+            </div>
+        </label>
+        <div class="controles">
+            <button (click)="cancelar()" type="button" class="link">Cancelar</button>
+            <button type="button">Adicionar</button>
+        </div>
+    </form>
+</div>

@@ -57,14 +57,14 @@ Fazendo com que contatos sejam levantados a partir de um servico:
     ✔ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos. @done(21-08-31 10:16)
     
 Criação e Exibição do componente que adiciona/cria um novo contato:
-    ☐ Crie o componente components/CreateContato
-    ☐ Estruture o template dele com base no https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
-    ☐ Estilize ele com base nos seletores #modal do arquivo https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    ✔ Crie o componente components/CreateContato @done(21-08-31 11:03)
+    ✔ Estruture o template dele com base no https://github.com/sergiomoura/contatos-html-template/blob/main/home.html @done(21-08-31 11:03)
+    ✔ Estilize ele com base nos seletores #modal do arquivo https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-31 11:03)
     Fazendo com que o componente comece "escondido":
-        ☐ Crie uma propriedade mostrandoCreateContato no componente app.component.ts e atribua a ela false
-        ☐ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf)
+        ✔ Crie uma propriedade mostrandoCreateContato no componente app.component.ts e atribua a ela false @done(21-08-31 11:03)
+        ✔ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf) @done(21-08-31 11:04)
     Fazendo com que ele seja exibido quando o menu seja clicado:
-        ☐ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado.
+        ✔ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado. @done(21-08-31 11:55)
         ☐ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick
         ☐ No app.component.html associe o evento emitido à execução de uma função mostrarModal.
            Essa função, definida no AppComponent, deve alterar o valor do atributo mostrandoCreateContato para true;

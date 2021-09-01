@@ -57,6 +57,7 @@ export class ContatoService {
   constructor() { }
 
   getContatos():Contato[] {
+    console.log(Math.random())
     return BASE_DE_CONTATOS;
   }
 

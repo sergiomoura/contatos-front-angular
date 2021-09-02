@@ -40,7 +40,11 @@ export class CreateContatoComponent implements OnInit {
   }
 
   salvar(){
-    ContatoService.addContato(this.novoContato);
+    if(this.novoContato.id){
+      ContatoService.updateContato(this.novoContato);
+    } else {
+      ContatoService.addContato(this.novoContato);
+    }
     this.emissor.emit()
   }
 

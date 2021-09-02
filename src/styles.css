@@ -84,6 +84,7 @@ a {
     color: rgb(80,0,250);
     text-decoration: underline;
     display: inline-block;
+    cursor: pointer;
 }
 
 a:hover{

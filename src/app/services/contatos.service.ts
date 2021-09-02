@@ -9,6 +9,7 @@ export class ContatoService {
   private static chave:string = "CONTATOS";
   
   public static contatosMudaram:EventEmitter<Contato[]> = new EventEmitter();
+  public static editarContatoClicado:EventEmitter<Contato> = new EventEmitter();
 
   constructor() {}
 
@@ -31,6 +32,9 @@ export class ContatoService {
     ContatoService.contatosMudaram.emit(contatos);
   }
 
+  public static editContato(c:Contato){
+    this.editarContatoClicado.emit(c);
+  }
   
   
 }

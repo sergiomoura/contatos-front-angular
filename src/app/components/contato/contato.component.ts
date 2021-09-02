@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
+import { ContatoService } from 'src/app/services/contatos.service';
 
 @Component({
   selector: 'app-contato',
@@ -12,6 +13,10 @@ export class ContatoComponent implements OnInit {
   contato!: Contato;
 
   constructor() { }
+
+  onEditarClick(){
+    ContatoService.editContato(this.contato);
+  }
 
   ngOnInit(): void {
   }

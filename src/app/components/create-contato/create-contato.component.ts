@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
 import { ContatoService } from 'src/app/services/contatos.service';
 
@@ -10,16 +10,17 @@ import { ContatoService } from 'src/app/services/contatos.service';
 })
 export class CreateContatoComponent implements OnInit {
 
+  @Input('contato') _novoContato!:Contato;
   @Output() emissor:EventEmitter<null> = new EventEmitter();
 
-  novoContato:Contato = {
-    nome:"",
-    email:"",
-    telefones:[""]
+  constructor() {}
+
+  set novoContato(c:Contato){
+    this._novoContato = c;
   }
 
-  constructor(private contatoService:ContatoService) {
-    
+  get novoContato():Contato{
+    return this._novoContato;
   }
 
   meEsconda(){
@@ -48,6 +49,13 @@ export class CreateContatoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(!this.novoContato){
+      this.novoContato = {
+        nome:"",
+        email:"",
+        telefones:[""]
+      }
+    }
   }
 
 }

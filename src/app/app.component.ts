@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { Contato } from './models/Contato';
+import { ContatoService } from './services/contatos.service';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-
 export class AppComponent {
+  
   title = 'contatos';
   mostrandoCreateContato = false;
+  contatoNoModal!:Contato; 
 
-  mostrarModal(){
+  constructor(){
+    ContatoService.editarContatoClicado.subscribe(
+      contato => {
+        this.mostrarModal(contato);
+        console.log(contato);
+      }
+
+    )
+  }
+
+  mostrarModal(contato:Contato = {nome:"",email:"",telefones:[""]}){
+    this.contatoNoModal = contato;
     this.mostrandoCreateContato = true;
   }
 

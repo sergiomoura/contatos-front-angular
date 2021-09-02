@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
 import { ContatoService } from 'src/app/services/contatos.service';
 
@@ -6,8 +6,7 @@ import { ContatoService } from 'src/app/services/contatos.service';
 @Component({
   selector: 'app-create-contato',
   templateUrl: './create-contato.component.html',
-  styleUrls: ['./create-contato.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./create-contato.component.css']
 })
 export class CreateContatoComponent implements OnInit {
 
@@ -28,7 +27,7 @@ export class CreateContatoComponent implements OnInit {
   }
 
   addTelefone(){
-    this.novoContato.telefones = [...this.novoContato.telefones, ""];
+    this.novoContato.telefones.push("");
   }
 
   rmTelefone(i:number){
@@ -40,7 +39,7 @@ export class CreateContatoComponent implements OnInit {
   }
 
   salvar(){
-    this.contatoService.addContato(this.novoContato);
+    ContatoService.addContato(this.novoContato);
     this.emissor.emit()
   }
 

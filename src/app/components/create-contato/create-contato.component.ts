@@ -48,8 +48,15 @@ export class CreateContatoComponent implements OnInit {
     this.emissor.emit()
   }
 
+  remover(){
+    if(window.confirm("Tem certeza que deseja remover o contato?")){
+      ContatoService.rmContato(this.novoContato.id!);
+      this.emissor.emit();
+    }
+  }
+
   ngOnChanges(){
-    console.log("teste")
+    console.log("teste");
   }
 
   ngOnInit(): void {

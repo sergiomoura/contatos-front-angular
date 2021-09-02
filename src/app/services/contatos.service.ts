@@ -45,6 +45,14 @@ export class ContatoService {
     window.localStorage.setItem(ContatoService.chave,JSON.stringify(contatos));
   }
 
+  public static rmContato(id:number){
+    let contatos = this.getContatos();
+    let posicao = contatos.findIndex( contato => contato.id == id );
+    contatos.splice(posicao, 1);
+    ContatoService.contatosMudaram.emit(contatos);
+    window.localStorage.setItem(ContatoService.chave,JSON.stringify(contatos));
+  }
+
   public static editContato(c:Contato){
     this.editarContatoClicado.emit(c);
   }

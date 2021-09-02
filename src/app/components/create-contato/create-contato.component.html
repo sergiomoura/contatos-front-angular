@@ -18,7 +18,7 @@
             </div>
         </label>
         <div class="controles">
-            <button type="button" class="link" *ngIf="novoContato.id">Remover contato</button>
+            <button type="button" class="link" *ngIf="novoContato.id" (click)="remover()">Remover contato</button>
             <button class="salvar" (click)=salvar()>Salvar</button>
         </div>
     </form>

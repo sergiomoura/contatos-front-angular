@@ -18,6 +18,13 @@ article form {
     padding: 40px;
     box-shadow: 0 0 2px inset rgba(256,256,256,0.3);
     width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+article form .fechar{
+    align-self: flex-end;
+    cursor: pointer;
 }
 
 article form input{
@@ -46,7 +53,11 @@ article form div a.remove:hover{
 
 article form .controles{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 40px;
     margin-bottom: 0;
+}
+
+article form .controles .link{
+    margin-right: auto;
 }

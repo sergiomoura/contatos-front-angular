@@ -1,5 +1,6 @@
 <article>
     <form>
+        <a class="fechar" (click)="meEsconda()"><i class="material-icons">close</i></a>
         <label>
             Nome:
             <input type="text" name="nome" id="nome" [(ngModel)]="novoContato.nome" >
@@ -17,8 +18,8 @@
             </div>
         </label>
         <div class="controles">
-            <button type="button" class="link" (click)="meEsconda()">Cancelar</button>
-            <button (click)=salvar()>Salvar</button>
+            <button type="button" class="link" *ngIf="novoContato.id">Remover contato</button>
+            <button class="salvar" (click)=salvar()>Salvar</button>
         </div>
     </form>
 </article>

@@ -6,3 +6,9 @@ main {
     gap: 10px;
     padding: 0 0 50px 0;
 }
+
+div{
+    display: block;
+    text-align: center;
+    width: 100%;
+}

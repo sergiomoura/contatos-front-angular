@@ -21,4 +21,8 @@ export class ListaDeContatosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mostrarModal() {
+    ContatoService.editContato({nome:"",email:"",telefones:[""]});
+  }
+
 }

@@ -1,3 +1,6 @@
 <main>
     <app-contato *ngFor="let contato of contatos" [contato]="contato"></app-contato>
 </main>
+<div *ngIf="contatos.length==0">
+    Nenhum contato por enquanto. <a (click)="mostrarModal()">Clique aqui para adicionar</a>
+</div>

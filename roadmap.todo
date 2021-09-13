@@ -1,0 +1,77 @@
+Aparência geral:
+    ☐ Crie uma pasta "img" dentro da pasta /src/assets/
+    A pasta assets é uma pasta de arquivos estáticos. Muito apropriada para armazenamento de imagens
+    utilizadas no layout das páginas
+    ☐ Salve na pasta /src/assets/img a imagem https://github.com/sergiomoura/contatos-html-template/blob/main/img/bg.jpg
+    ☐ Aplicar geral.css para folha de estilos que será usada no site inteiro.
+    . Visite
+    . https://sergiomoura.github.io/contatos-html-template/home.html
+    . https://github.com/sergiomoura/contatos-html-template
+    ☐ Limpe app.component.html
+    ☐ Visite localhost:4200 e verifique se o background já está visível
+    ☐ Incorpore os css externos no index.html
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
+
+Criação de Menu:
+    ☐ Criar componentnte components/Menu
+    O conteúdo de menu.component.html dele deve ser o do elemento nav contida em https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
+    ☐ Adicione esse componente ao app.component.html
+    ☐ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    . *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
+    ☐ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    ☐ Verifique se o menu aparece corretamente.
+
+Criação de Lista de Contatos:
+    ☐ Criar o componente components/ListaDeContatos
+    O conteúdo de lista-de-contatos.component.html deve ser o main de https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
+    ☐ Adicione esse componente ao app.component.html
+    ☐ Dê o estilo desse componente baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    ☐ Verifique se a lista de contatos aparece corretamente.
+
+Criação de Componente contato:
+    ☐ Criar componente components/Contato
+    ☐ Utilizar como componente com componente uma das sections contidas na main do lista-de-contatos.component.html
+    ☐ Utilizar o css apropriado para esse componente.
+    ☐ Reescrever o html do componente lista de contatos para exibir uma ou duas dezenas de app-contato
+
+Fazendo que os contatos sejam mais dinâmicos:
+    ☐ Crie uma pasta models dentro da pastas src/app
+    ☐ Crie nessa pasta models um arquivo Contato.ts
+    Exporte de dentro desse arquivo uma interface que defina 3 campos
+    .nome (do tipo string),
+    .email (do tipo string) 
+    .tels (um array de strings)
+    ☐ Declare na classe ListaDeContatosComponent um atributo contatos do tipo array de contatos
+    ☐ Atribua a esse atributo um array com pelo menos 10 contatos
+    ☐ Faça com que esses contatos sejam exibidos.
+
+Fazendo com que contatos sejam levantados a partir de um servico:
+    ☐ Crie um serviço services/Contato
+    ☐ Declare um atributo privado contatos contendo o array de contatos que, agora, não deve mais estar na component ListaDeContatos
+    ☐ Crie nesse serviço a função getContatos() que retorna a lista de contatos.
+    ☐ Importe o serviço ContatoService na Componente ListaDeContatos
+    ☐ Crie um atributo privado cs da classe ContatoService e o intancie.
+    ☐ No constructor do ListaDeContatosComponent levante os contatos usando contatoService.getContato e atribua-os ao atributo contatos.
+    
+Criação e Exibição do componente que adiciona/cria um novo contato:
+    ☐ Crie o componente components/CreateContato
+    ☐ Estruture o template dele com base no https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
+    ☐ Estilize ele com base nos seletores #modal do arquivo https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css
+    Fazendo com que o componente comece "escondido":
+        ☐ Crie uma propriedade mostrandoCreateContato no componente app.component.ts e atribua a ela false
+        ☐ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf)
+    Fazendo com que ele seja exibido quando o menu seja clicado:
+        ☐ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado.
+        ☐ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick
+        ☐ No app.component.html associe o evento emitido à execução de uma função mostrarModal.
+           Essa função, definida no AppComponent, deve alterar o valor do atributo mostrandoCreateContato para true;
+    Fazendo com que ele seja escondido quando o cancelar seja clicado:
+        ☐ ... escreva aqui os passos ... análogos ao do item anterior.
+
+
+
+
+Archive:

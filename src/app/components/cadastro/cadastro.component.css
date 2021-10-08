@@ -1,0 +1,19 @@
+form {
+    width: 400px;
+    padding: 50px;
+    background-color: rgba(0,0,0,0.4);
+    margin: 100px auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+    width: 100%;
+}
+
+.controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}

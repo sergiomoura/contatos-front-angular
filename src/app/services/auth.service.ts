@@ -37,4 +37,8 @@ export class AuthService {
       })
     )
   }
+
+  isLogged():boolean{
+    return window.sessionStorage.getItem('token') != null;
+  }
 }

@@ -28,4 +28,13 @@ export class AuthService {
       )
     )
   }
+
+  login(email:string, senha: string):Observable<Response>{
+    return <Observable<Response>>this.http.post(`${this.url}/login`, {email,senha}).pipe(
+      map(data => {
+        window.sessionStorage.setItem("token",(<Response>data).token)
+        return <Response>data;
+      })
+    )
+  }
 }

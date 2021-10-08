@@ -9,6 +9,7 @@ import { ListaDeContatosComponent } from './components/lista-de-contatos/lista-d
 import { ContatoComponent } from './components/contato/contato.component';
 import { CreateContatoComponent } from './components/create-contato/create-contato.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SobreComponent } from './components/sobre/sobre.component';
     ListaDeContatosComponent,
     ContatoComponent,
     CreateContatoComponent,
-    SobreComponent
+    SobreComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

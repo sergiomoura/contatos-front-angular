@@ -1,0 +1,31 @@
+form {
+    width: 700px;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    padding: 30px 0;
+    margin: 100px auto;
+}
+
+form > div {
+    padding: 15px 25px;
+    width: 50%;
+}
+form > div > label > input[type=text],
+form > div > label > input[type=email],
+form > div > label > input[type=password]{
+    width: 100%;
+    display: block;
+}
+
+form > div > .controles{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+form > div:nth-child(2){
+    border-left: 1px solid rgba(256,256,256,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

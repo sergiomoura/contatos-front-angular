@@ -1,6 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map } from "rxjs/operators";
+
+interface Response {
+  msg:string,
+  token:string
+} 
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +18,14 @@ export class AuthService {
 
   constructor(private http:HttpClient) { }
 
-  cadastrar(nome:string, email:string, senha:string):Observable<{msg:string,token:string}>{
-    return <Observable<{msg:string,token:string}>>this.http.post(`${this.url}/registrar`,{nome, email, senha})
+  cadastrar(nome:string, email:string, senha:string):Observable<Response>{
+    return <Observable<Response>>this.http.post(`${this.url}/registrar`,{nome, email, senha}).pipe(
+      map(
+        data => {
+          window.sessionStorage.setItem("token",(<Response>data).token)
+          return <Response>data;
+        }
+      )
+    )
   }
 }

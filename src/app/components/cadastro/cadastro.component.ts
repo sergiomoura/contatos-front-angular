@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -13,14 +14,20 @@ export class CadastroComponent implements OnInit {
   public senha:string  = '';
   public conf:string   = '';
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   cadastrar(){
     this.authService.cadastrar(this.nome, this.email, this.senha).subscribe(
-      data => console.log(data)
+      () => {
+        this.goHome();
+      }
     )
+  }
+
+  private goHome(){
+    this.router.navigateByUrl('/home')
   }
 }

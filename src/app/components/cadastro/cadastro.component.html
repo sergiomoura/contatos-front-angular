@@ -1,22 +1,22 @@
 <form action="home.html">
     <label>
         Nome
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" [(ngModel)]="nome">
     </label>
     <label>
         E-mail
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" [(ngModel)]="email">
     </label>
     <label>
         Senha
-        <input type="password" name="senha" id="senha">
+        <input type="password" name="senha" id="senha" [(ngModel)]="senha">
     </label>
     <label>
         Confirmação de Senha
-        <input type="password" name="confirmacao" id="confirmacao">
+        <input type="password" name="confirmacao" id="confirmacao" [(ngModel)]="conf">
     </label>
     <div class="controles">
         <a routerLink="/">Voltar a página inicial</a>
-        <button>Entrar</button>
+        <button (click)="cadastrar()" [disabled]="senha.length==0 || senha!=conf" >Entrar</button>
     </div>
 </form>

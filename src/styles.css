@@ -69,6 +69,12 @@ button:hover {
     color: #fff;
 }
 
+button:disabled{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.3);;
+    cursor: default;
+}
+
 button.link{
     background-color: transparent;
     color: rgb(80,0,250);

@@ -38,6 +38,10 @@ export class AuthService {
     )
   }
 
+  logout(){
+    window.sessionStorage.removeItem('token');
+  }
+
   isLogged():boolean{
     return window.sessionStorage.getItem('token') != null;
   }

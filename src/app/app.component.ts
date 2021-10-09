@@ -10,27 +10,23 @@ import { ContatoService } from './services/contatos.service';
 
 export class AppComponent {
   
-  title = 'contatos';
-  mostrandoCreateContato = false;
-  contatoNoModal!:Contato; 
+  mostrandoPreloader = false;
 
   constructor(){
     ContatoService.editarContatoClicado.subscribe(
       contato => {
-        this.mostrarModal(contato);
-        console.log(contato);
+        this.mostrarPreloader();
       }
 
     )
   }
 
-  mostrarModal(contato:Contato = {nome:"",email:"",telefones:[""]}){
-    this.contatoNoModal = contato;
-    this.mostrandoCreateContato = true;
+  mostrarPreloader(){
+    this.mostrandoPreloader = true;
   }
 
-  esconderModal(){
-    this.mostrandoCreateContato = false;
+  esconderPreloader(){
+    this.mostrandoPreloader = false;
   }
 
 }

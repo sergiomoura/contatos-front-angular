@@ -1,19 +1,21 @@
-<form>
-    <div>
-        <label>
-            E-mail
-            <input type="email" name="email" id="email" [(ngModel)]="email">
-        </label>
-        <label>
-            Senha
-            <input type="password" name="senha" id="senha" [(ngModel)]="senha">
-        </label>
-        <div class="controles">
-            <button class="link">Esqueci minha senha</button>
-            <button (click)="login()">Entrar</button>
+<main>
+    <form>
+        <div>
+            <label>
+                E-mail
+                <input type="email" name="email" id="email" [(ngModel)]="email">
+            </label>
+            <label>
+                Senha
+                <input type="password" name="senha" id="senha" [(ngModel)]="senha">
+            </label>
+            <div class="controles">
+                <button class="link">Esqueci minha senha</button>
+                <button (click)="login()">Entrar</button>
+            </div>
         </div>
-    </div>
-    <div>
-        <a routerLink="/cadastro">Registre-se</a>
-    </div>
-</form>
+        <div>
+            <a routerLink="/cadastro">Registre-se</a>
+        </div>
+    </form>
+</main>

@@ -13,6 +13,7 @@
                 <button class="link">Esqueci minha senha</button>
                 <button (click)="login()">Entrar</button>
             </div>
+            <div class="erro" *ngIf="mostrandoErro">Login/Senha inválido</div>
         </div>
         <div>
             <a routerLink="/cadastro">Registre-se</a>

@@ -12,11 +12,14 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService, private router:Router) { }
   email:string = "";
   senha:string = "";
+  mostrandoErro = false;
   
   login(){
     this.authService.login(this.email, this.senha).subscribe(
-      data => {this.goHome()},
-      error => {console.log(error)}
+      {
+        next: data => {this.goHome()},
+        error: error => {this.mostrandoErro = true}
+      }
     )
   }
 

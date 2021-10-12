@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from "rxjs/operators";
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from "rxjs/operators";
 import { EventHubService } from './event-hub.service';
 
 interface Response {
@@ -30,15 +30,28 @@ export class AuthService {
     )
   }
 
-  login(email:string, senha: string):Observable<Response>{
+  login(email:string, senha: string){
+
     EventHubService.carregamentoIniciado.emit("login");
-    return <Observable<Response>>this.http.post(`${this.url}/login`, {email,senha}).pipe(
+    
+    let observable = this.http.post(`${this.url}/login`, {email,senha});
+    
+    observable = observable.pipe(
       map(data => {
         EventHubService.carregamentoFinalizado.emit("login");
-        window.sessionStorage.setItem("token",(<Response>data).token)
-        return <Response>data;
-      })
+        window.sessionStorage.setItem("token",(<Response>data).token);
+        return data;
+      }),
+      catchError(
+        err => {
+          EventHubService.carregamentoFinalizado.emit("login");
+          return throwError(err);
+        }
+      )
     )
+
+    return observable;
+  
   }
 
   logout(){

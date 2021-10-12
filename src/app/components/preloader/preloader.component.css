@@ -1,51 +1,72 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+main{
     position: fixed;
     top: 0;
     left: 0;
-    background:  rgba(30, 0, 100, 0.5);
-}
-.clock-loader {
-    --clock-color: #FFF;
-    --clock-width: 4rem;
-    --clock-radius: calc(var(--clock-width) / 2);
-    --clock-minute-length: calc(var(--clock-width) * 0.4);
-    --clock-hour-length: calc(var(--clock-width) * 0.2);
-    --clock-thickness: 0.2rem;
-    position: relative;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--clock-width);
-    height: var(--clock-width);
-    border: 3px solid var(--clock-color);
-    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
 }
-.clock-loader::before, .clock-loader::after {
-    position: absolute;
-    content: "";
-    top: calc(var(--clock-radius) * 0.25);
-    width: var(--clock-thickness);
-    background: var(--clock-color);
-    border-radius: 10px;
-    transform-origin: center calc(100% - calc(var(--clock-thickness) / 2));
-    animation: spin infinite linear;
+
+.loader,
+.loader:before,
+.loader:after {
+  background: rgb(60, 0, 200);
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 1em;
 }
-.clock-loader::before {
-    height: var(--clock-minute-length);
-    animation-duration: 2s;
+.loader {
+  color: rgb(60, 0, 200);
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 }
-.clock-loader::after {
-    top: calc(var(--clock-radius) * 0.25 + var(--clock-hour-length));
-    height: var(--clock-hour-length);
-    animation-duration: 15s;
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
 }
-@keyframes spin {
-    to {
-        transform: rotate(1turn);
-   }
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 1em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 1em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 1em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 1em;
+  }
 }

@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { Contato } from './models/Contato';
 import { ContatoService } from './services/contatos.service';
+import { EventHubService } from './services/event-hub.service';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,12 @@ export class AppComponent {
   mostrandoPreloader = false;
 
   constructor(){
-    ContatoService.editarContatoClicado.subscribe(
-      contato => {
-        this.mostrarPreloader();
-      }
+    EventHubService.carregamentoIniciado.subscribe(
+      () => console.log("Carregamento iniciado")
+    )
 
+    EventHubService.carregamentoFinalizado.subscribe(
+      () => console.log("Carregamento finalizado")
     )
   }
 

@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
   
   login(){
     this.authService.login(this.email, this.senha).subscribe(
-      data => {this.goHome()}
+      data => {this.goHome()},
+      error => {console.log(error)}
     )
   }
 

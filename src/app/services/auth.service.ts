@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from "rxjs/operators";
 import { EventHubService } from './event-hub.service';
+import { URL, LOCAL_STORAGE_KEY } from "../AppSettings";
 
 interface Response {
   msg:string,
@@ -15,15 +16,13 @@ interface Response {
 })
 export class AuthService {
 
-  private readonly url = "http://contatos-nodb.herokuapp.com";
-
   constructor(private http:HttpClient) { }
 
   cadastrar(nome:string, email:string, senha:string):Observable<Response>{
-    return <Observable<Response>>this.http.post(`${this.url}/registrar`,{nome, email, senha}).pipe(
+    return <Observable<Response>>this.http.post(`${URL}/registrar`,{nome, email, senha}).pipe(
       map(
         data => {
-          window.sessionStorage.setItem("token",(<Response>data).token)
+          window.sessionStorage.setItem(LOCAL_STORAGE_KEY,(<Response>data).token)
           return <Response>data;
         }
       )
@@ -34,12 +33,12 @@ export class AuthService {
 
     EventHubService.carregamentoIniciado.emit("login");
     
-    let observable = this.http.post(`${this.url}/login`, {email,senha});
+    let observable = this.http.post(`${URL}/login`, {email,senha});
     
     observable = observable.pipe(
       map(data => {
         EventHubService.carregamentoFinalizado.emit("login");
-        window.sessionStorage.setItem("token",(<Response>data).token);
+        window.sessionStorage.setItem(LOCAL_STORAGE_KEY,(<Response>data).token);
         return data;
       }),
       catchError(
@@ -55,10 +54,10 @@ export class AuthService {
   }
 
   logout(){
-    window.sessionStorage.removeItem('token');
+    window.sessionStorage.removeItem(LOCAL_STORAGE_KEY);
   }
 
   isLogged():boolean{
-    return window.sessionStorage.getItem('token') != null;
+    return window.sessionStorage.getItem(LOCAL_STORAGE_KEY) != null;
   }
 }
